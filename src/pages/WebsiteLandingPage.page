@@ -1,0 +1,274 @@
+<apex:page showHeader="false" sideBar="false" controller="CallMeBackInboundNotificationHandler"
+           standardStylesheets="false">
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <style>
+            body {
+              padding-top: 54px;
+            }
+
+            @media (min-width: 992px) {
+              body {
+                padding-top: 56px;
+              }
+            }
+
+            header.masthead {
+              background: url('https://static.pexels.com/photos/8434/holiday-trip-packaging-8434.jpg') no-repeat center center scroll;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              background-size: cover;
+              -o-background-size: cover;
+            }
+
+            header.masthead>.overlay {
+              padding: 5rem 0;
+              text-align: center;
+              background: rgba(0, 0, 0, 0.6);
+            }
+
+            @media (min-width: 992px) {
+              header.masthead>.overlay {
+                padding: 10rem 0;
+              }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+    <!-- Navigation -->
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MS Clothing</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="masthead">
+        <div class="overlay">
+            <div class="container">
+                <h1 class="display-1 text-white">Manners Maketh Man</h1>
+                <h2 class="display-4 text-white">and so does our clothes...</h2>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-2">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle"
+                             src="//c.pxhere.com/photos/b4/5e/fashion_suit_tailor_clothes-1281983.jpg!d" alt=""/>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Business Suits...</h2>
+                        <p>We always feeling excited to see the corporate world stepping out in style. A well made suit
+                            is an essential part of every businessman’s wardrobe, reflecting professionalism, good taste
+                            and an expression of personal style.</p>
+                        <button type="button" onclick="openModal('Business Suit')" class="btn btn-secondary">Request a
+                            callback
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle"
+                             src="//static.pexels.com/photos/45055/pexels-photo-45055.jpeg" alt=""/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-5">
+                        <h2 class="display-4">Business Tie's</h2>
+                        <p>Our ties are made from the quality fabrics and are available in a gamut of colours and
+                            patterns
+                            to match your shirts or jackets and make you look dapper</p>
+                        <button type="button" onclick="openModal('Business Tie')" class="btn btn-secondary">Request a
+                            callback
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-2">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle"
+                             src="https://static.pexels.com/photos/326547/pexels-photo-326547.jpeg" alt=""/>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Formal Shoes</h2>
+                        <p>Choose from our wide variety of formal shoes. Oxfords, Brogues and what not...</p>
+                        <button type="button" onclick="openModal('Socks')" class="btn btn-secondary">Request a
+                            callback
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; MS Clothing 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="//unpkg.com/popper.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <!--modal-->
+
+    <div class="modal fade" id="mymodal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Request callback form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <apex:form >
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input maxlength="40" type="text" class="form-control" id="name"
+                                   style="border-left: solid 2px red" required="required"
+                                   placeholder="Enter Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" maxlength="13"
+                                   style="border-left: solid 2px red" required="required"
+                                   placeholder="Enter you phone number. Example +919999999999"
+                                   aria-describedby="nameHelp"/>
+                            <small id="nameHelp" class="form-text text-muted">We'll never share your phone with anyone
+                                else.
+                            </small>
+                        </div>
+                        <small id="message"></small>
+                    </apex:form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="validateDetails()">Call me now</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <apex:form >
+        <apex:actionFunction name="fetchLocationJS" action="{!fetchAddress}" reRender="none">
+            <apex:param value="" assignTo="{!strLatitude}" name="strLatitude"/>
+            <apex:param value="" assignTo="{!strLongitude}" name="strLongitude"/>
+        </apex:actionFunction>
+        <apex:actionFunction action="{!createCallerDetails}" name="createCallerDetailsJS" reRender="none"
+                             onComplete="finalMessage()">
+            <apex:param value="" assignTo="{!strName}" name="strName"/>
+            <apex:param value="" assignTo="{!strPhone}" name="strPhone"/>
+            <apex:param value="" assignTo="{!strProductOfInterest}" name="strProductOfInterest"/>
+            <apex:param value="" assignTo="{!strPageURL}" name="strPageURL"/>
+        </apex:actionFunction>
+    </apex:form>
+
+    <script>
+        var ms = ms || {};
+        function openModal(type){
+            ms.product = type;
+            $('#mymodal').modal('show');
+        }
+
+        $(document).ready(function(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+
+            }
+        })
+
+        function showPosition(position) {
+            fetchLocationJS(position.coords.latitude, position.coords.longitude);
+        }
+
+        function validateDetails(){
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            if(name && phone){
+                createCallerDetailsJS(name,phone,ms.product, window.location.href);
+            } else {
+                document.getElementById('message').innerText = 'Please enter phone and Name.';
+            }
+        }
+
+        function finalMessage(){
+            document.getElementById('message').innerText = 'You will receive a callback in 60 seconds';
+            setTimeout(function(){
+                document.getElementById('message').innerText = '';
+            }, 3000)
+        }
+
+
+
+    </script>
+</apex:page>

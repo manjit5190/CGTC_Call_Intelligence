@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>CallMeBackInboundNotificationController</members>
+        <members>CallMeBackInboundNotificationHandler</members>
+        <members>CallMeBackInboundNotificationUtility</members>
+        <members>GeoLocationClass</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>CallMeBackInboundNotificationPage</members>
+        <members>WebsiteLandingPage</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Case</members>
+        <name>AssignmentRules</name>
+    </types>
+    <types>
+        <members>TwilioAdapter</members>
+        <name>CallCenter</name>
+    </types>
+    <types>
+        <members>CGTC_Manjit_Singh</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Case.Caller__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>CGTC_CallingNumber__c</members>
+        <members>CallIntelligenceSettings__c</members>
+        <members>Case</members>
+        <members>Contact</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>MS_Clothing</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>CGTC_CallingNumber__c-CGTC_BlockedNumber Layout</members>
+        <members>Contact-Contact %28Sales%29 Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Geolocation</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <version>41.0</version>
+</Package>

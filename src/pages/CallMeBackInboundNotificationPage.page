@@ -1,0 +1,28 @@
+<!--
+ - Created by Manjit Singh on 10 October 2017.
+ -->
+
+<apex:page id="CallMeBackInboundNotificationPage" showHeader="false" sideBar="false"
+           controller="CallMeBackInboundNotificationController" action="{!fetchCases}">
+    <apex:includeScript value="/support/console/40.0/integration.js"/>
+    <apex:includeScript value="/support/api/40.0/interaction.js"/>
+    <support:clickToDial number="1234567890"/>
+    <apex:pageBlock title="Call Queue">
+        <apex:form >
+            <apex:actionPoller enabled="true" interval="30" status="status" action="{!fetchCases}" reRender="cases"/>
+        </apex:form>
+        <apex:actionStatus startText="Refreshing..." stopText="" id="status"/>
+        <apex:pageBlockSection id="cases" columns="1">
+            <apex:pageBlockTable value="{!lstCasesInQueue}" var="case">
+                <apex:column headerValue="Case Number" value="{!case.CaseNumber}"/>
+                <apex:column headerValue="Product of Interest" value="{!case.Caller__r.Product_Of_Interest__c}"/>
+                <apex:column headerValue="Caller Name" value="{!case.Caller__r.Caller_Name__c}"/>
+                <apex:column onClick="sforce.console.openPrimaryTab(null,'/{!case.Id}', true)" headerValue="Phone">
+                    <span onclick="sforce.console.cti.sendCTIMessage('/CLICK_TO_DIAL?DN={!case.Contact.Phone}&ID={\'{!case.Id}\'}&ENTITY_NAME=Case&OBJECT_NAME=Case');">
+                            {!case.Contact.Phone}<img src="/img/btn_dial_inline.gif" alt="Click to dial" width="16" height="10" title="Click to dial"/>
+                    </span>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
