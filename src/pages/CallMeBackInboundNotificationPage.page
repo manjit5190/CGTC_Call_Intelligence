@@ -6,7 +6,6 @@
            controller="CallMeBackInboundNotificationController" action="{!fetchCases}">
     <apex:includeScript value="/support/console/40.0/integration.js"/>
     <apex:includeScript value="/support/api/40.0/interaction.js"/>
-    <support:clickToDial number="1234567890"/>
     <apex:pageBlock title="Call Queue">
         <apex:form >
             <apex:actionPoller enabled="true" interval="30" status="status" action="{!fetchCases}" reRender="cases"/>
