@@ -41,4 +41,4 @@ The Call Intelligence application provides following functionalities:
  - Post Deployment
 	 - Goto Setup > Custom setting > CGTC_CallingNumber__c
 	 - Add value 2 in Time and 10 in number of records. 
-	 - Provide access of the application and fields to representatives. A profile for testing is already incuded in the package.
+	 - Provide access of the application and fields to representatives. A profile for testing is already included in the package.
